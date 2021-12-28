@@ -30,9 +30,9 @@ body {
   .main-slider .carousel-caption {
     left: auto;
     right: 50%;
-    bottom: auto;
-    top: 50%;
-    transform: translate(50%, -50%);
+    bottom: 0;
+    top: auto;
+    transform: translate(50%, -30%);
     background-color: rgba(0, 0, 0, 0.6);
     padding: 24px;
     border-radius: 5px; }
@@ -107,15 +107,7 @@ body {
     font-size: 36px; }
   .activities .current-activity-holder {
     background-color: #fff;
-    padding: 15px;
-    /* Track */
-    /* Handle */ }
-    .activities .current-activity-holder::-webkit-scrollbar {
-      width: 7px; }
-    .activities .current-activity-holder::-webkit-scrollbar-track {
-      background: #f1f1f1; }
-    .activities .current-activity-holder::-webkit-scrollbar-thumb {
-      background: #e92e30; }
+    padding: 15px; }
   .activities .current-activity .content {
     margin-top: 24px; }
     @media (max-width: 991px) {
@@ -133,7 +125,15 @@ body {
       font-weight: bold; }
   .activities .other-activities {
     height: 400px;
-    overflow: auto; }
+    overflow: auto;
+    /* Track */
+    /* Handle */ }
+    .activities .other-activities::-webkit-scrollbar {
+      width: 7px; }
+    .activities .other-activities::-webkit-scrollbar-track {
+      background: #f1f1f1; }
+    .activities .other-activities::-webkit-scrollbar-thumb {
+      background: #e92e30; }
     .activities .other-activities .activity-contnt {
       margin-bottom: 16px; }
       .activities .other-activities .activity-contnt span {
@@ -152,8 +152,9 @@ body {
       margin-bottom: 24px; }
 
 footer {
+  position: relative;
   background-color: #e92e30;
-  padding: 50px 0; }
+  padding: 50px 0 0; }
   footer .content img {
     margin-bottom: 8px; }
   footer .content p.lead {
@@ -169,6 +170,12 @@ footer {
     color: #fff;
     display: block;
     padding: 14px 0 14px; }
+  footer .copyrights {
+    background-color: #2e6c49;
+    padding: 16px;
+    color: #fff;
+    text-align: center;
+    margin-top: 24px; }
 
 /*articles*/
 .articles {
@@ -182,7 +189,8 @@ footer {
     background-color: #fff;
     margin: 0;
     padding: 15px 8px;
-    margin-bottom: 24px; }
+    margin-bottom: 24px;
+    flex-direction: row-reverse; }
     .articles .article-content .article-text h4 {
       margin-bottom: 16px;
       font-size: 17px; }
@@ -194,13 +202,29 @@ footer {
         font-size: 12px; }
     .articles .article-content .article-text p {
       font-size: 14px;
-      line-height: 24px; }
+      line-height: 24px;
+      margin-bottom: 36px; }
       .articles .article-content .article-text p a {
         color: #e92e30;
         font-weight: bold;
         text-decoration: none;
         display: block;
         margin-top: 8px; }
+  .articles .comments h3 {
+    font-weight: bold;
+    margin-bottom: 24px; }
+  .articles .comments .comments-content {
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin-bottom: 16px; }
+    .articles .comments .comments-content h4 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0; }
+    .articles .comments .comments-content small {
+      display: block;
+      margin: 5px 0 16px 0; }
 
 .article-page .breadcrumb {
   padding: 8px;

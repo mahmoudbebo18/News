@@ -45,9 +45,9 @@ body {
   .carousel-caption {
     left: auto;
     right: 50%;
-    bottom: auto;
-    top: 50%;
-    transform: translate(50%, -50%);
+    bottom: 0;
+    top: auto;
+    transform: translate(50%, -30%);
     background-color: rgba(0, 0, 0, 0.6);
     padding: 24px;
     border-radius: 5px;
@@ -149,19 +149,7 @@ body {
   .current-activity-holder{
     background-color: #fff;
     padding: 15px;
-    &::-webkit-scrollbar {
-      width: 7px;
-    }
-    
-    /* Track */
-    &::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-    
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-      background: $mainColor;
-    }
+
   }
   .current-activity{
     .content{
@@ -188,6 +176,19 @@ body {
   .other-activities{
     height: 400px;
     overflow: auto;
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $mainColor;
+    }
     .activity-contnt{
       margin-bottom: 16px;
       span{
@@ -216,8 +217,9 @@ body {
 
 
 footer{
+  position: relative;
   background-color: $mainColor;
-  padding: 50px 0 ;
+  padding: 50px 0 0  ;
   .content{
     img{
       margin-bottom: 8px;
@@ -243,6 +245,13 @@ footer{
       }
     }
   }
+  .copyrights{
+    background-color: $secColor;
+    padding: 16px;
+    color: #fff;
+    text-align: center;
+    margin-top: 24px;
+  }
 }
 
 
@@ -260,6 +269,7 @@ footer{
     margin: 0;
     padding: 15px 8px;
     margin-bottom: 24px;
+    flex-direction: row-reverse;
     .article-text {
       h4{
         margin-bottom: 16px;
@@ -276,6 +286,7 @@ footer{
       p{
         font-size: 14px;
         line-height: 24px;
+        margin-bottom: 36px;
         a{
           color:$mainColor;
           font-weight: bold;
@@ -283,6 +294,27 @@ footer{
           display: block;
           margin-top: 8px;
         }
+      }
+    }
+  }
+  .comments{
+    h3{
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+    .comments-content{
+      padding: 16px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      h4{
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+      }
+      small{
+        display: block;
+        margin:5px 0 16px 0 ;
       }
     }
   }
